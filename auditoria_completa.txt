@@ -1,0 +1,185 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20261112003654
+Nombre de usuario: LEANDRO\usuario nuevo
+Usuario RunAs: LEANDRO\usuario nuevo
+Nombre de la configuración: 
+Máquina: LEANDRO (Microsoft Windows NT 10.0.26200.0)
+Aplicación host: C:\WINDOWS\system32\WindowsPowerShell\v1.0\PowerShell.exe
+Id. de proceso: 18372
+PSVersion: 5.1.26100.9818
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9818
+BuildVersion: 10.0.26100.9818
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+La transcripción ha comenzado. El archivo de salida es C:\Users\usuario nuevo\Desktop\auditoria_completa.txt
+PS C:\Users\usuario nuevo> $PSDefaultParameterValues['Out-File:Encoding'] = 'utf8'
+PS C:\Users\usuario nuevo> cd "$escritorio"
+PS C:\Users\usuario nuevo\Desktop> mkdir Sistema_Ventas
+
+
+    Directorio: C:\Users\usuario nuevo\Desktop
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        12/11/2026     00:38                Sistema_Ventas
+
+
+PS C:\Users\usuario nuevo\Desktop> cd Sistema_Ventas
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> mkdir Frontend, Backend, BaseDatos
+
+
+    Directorio: C:\Users\usuario nuevo\Desktop\Sistema_Ventas
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        12/11/2026     00:38                Frontend
+d-----        12/11/2026     00:38                Backend
+d-----        12/11/2026     00:38                BaseDatos
+
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> echo "Version 1.0 del Sistema de Ventas" > README.md
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Version 1.0 del Sistema de Ventas"
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> New-Item -ItemType File -Path "Frontend\.gitkeep", "Backend\.gitkeep", "BaseDatos\.gitkeep"
+
+
+    Directorio: C:\Users\usuario nuevo\Desktop\Sistema_Ventas\Frontend
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        12/11/2026     00:39              0 .gitkeep
+
+
+    Directorio: C:\Users\usuario nuevo\Desktop\Sistema_Ventas\Backend
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        12/11/2026     00:39              0 .gitkeep
+
+
+    Directorio: C:\Users\usuario nuevo\Desktop\Sistema_Ventas\BaseDatos
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        12/11/2026     00:39              0 .gitkeep
+
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> Get-ChildItem -Recurse
+
+
+    Directorio: C:\Users\usuario nuevo\Desktop\Sistema_Ventas
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        12/11/2026     00:38                Backend
+d-----        12/11/2026     00:38                BaseDatos
+d-----        12/11/2026     00:38                Frontend
+-a----        12/11/2026     00:39             38 README.md
+
+
+    Directorio: C:\Users\usuario nuevo\Desktop\Sistema_Ventas\Backend
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        12/11/2026     00:39              0 .gitkeep
+
+
+    Directorio: C:\Users\usuario nuevo\Desktop\Sistema_Ventas\BaseDatos
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        12/11/2026     00:39              0 .gitkeep
+
+
+    Directorio: C:\Users\usuario nuevo\Desktop\Sistema_Ventas\Frontend
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        12/11/2026     00:39              0 .gitkeep
+
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> Get-Content README.md
+Version 1.0 del Sistema de Ventas
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git init
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git branch -M main
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git add .
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git status
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git commit -m "Día 1: Despliegue de la estructura base"
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git log --oneline
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git status
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git remote add origin https://github.com/leandrogimenez2026/Sistema-Ventas.git
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git push -u origin main
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git status
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git remote -v
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> echo "Conectando al servidor SQL..." > BaseDatos\conexion.ps1
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Conectando al servidor SQL..."
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> echo "Actualizacion Dia 2: Modulo DB agregado" >> README.md
+>> EnlaceDeParámetros(Out-File): nombre="InputObject"; valor="Actualizacion Dia 2: Modulo DB agregado"
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> mkdir Pruebas_Unitarias
+
+
+    Directorio: C:\Users\usuario nuevo\Desktop\Sistema_Ventas
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        12/11/2026     00:49                Pruebas_Unitarias
+
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> New-Item -ItemType File -Path "Pruebas_Unitarias\.gitkeep"
+
+
+    Directorio: C:\Users\usuario nuevo\Desktop\Sistema_Ventas\Pruebas_Unitarias
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        12/11/2026     00:49              0 .gitkeep
+
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> Get-Content README.md
+Version 1.0 del Sistema de Ventas
+Actualizacion Dia 2: Modulo DB agregado
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> Get-Content BaseDatos\conexion.ps1
+Conectando al servidor SQL...
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git status
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git add .
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git commit -m "Día 2: Agregados scripts de DB y carpeta de pruebas"
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git push
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git log --oneline
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> git status
+
+PS C:\Users\usuario nuevo\Desktop\Sistema_Ventas> Stop-Transcript
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20261112005422
+**********************
